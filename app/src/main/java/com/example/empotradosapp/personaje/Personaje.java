@@ -1,4 +1,4 @@
-package com.example.empotradosapp;
+package com.example.empotradosapp.personaje;
 
 public class Personaje {
     private int id;

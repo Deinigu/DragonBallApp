@@ -6,19 +6,21 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.empotradosapp.personaje.PersonajeContract;
+
 public class DbHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1; // Versión de la Base de Datos
     private static final String DATABASE_NAME = "dragonball.db"; // Nombre de la base de datos
-    public static final String TABLE_PERSONAJES = "t_personajes"; // Nombre de la tabla
+    public static final String TABLE_PERSONAJES = PersonajeContract.PersonajeEntry.TABLE_NAME; // Nombre de la tabla
 
     // Query para la creación de la tabla de personajes
     public static final String SQL_CREATE_PERSONAJES = "CREATE TABLE " + TABLE_PERSONAJES + "(" +
-            "id INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "nombre TEXT NOT NULL," +
-            "bando INTEGER NOT NULL," +
-            "minPoder INTEGER NOT NULL," +
-            "maxPoder INTEGER NOT NULL," +
-            "tier INTEGER NOT NULL)";
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE + " TEXT NOT NULL," +
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO + " INTEGER NOT NULL," +
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER + " INTEGER NOT NULL," +
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER + " INTEGER NOT NULL," +
+            PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER + " INTEGER NOT NULL)";
     // Query para la eliminación de la tabla de personajes
     public static final String SQL_DELETE_ENTRIES = "DROP TABLE IF EXISTS " + TABLE_PERSONAJES;
 
