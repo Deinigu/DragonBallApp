@@ -4,4 +4,5 @@
     <string name="titulo">Pelea de Bola de Dragón</string>
     <string name="fighter_advisory">Vas a luchar contra...</string>
     <string name="choose_fighter">Escoge a tu luchador:</string>
+    <string name="botonText">¡LUCHAD!</string>
 </resources>

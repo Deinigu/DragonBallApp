@@ -3,4 +3,5 @@
     <string name="titulo">Dragon Ball Fight</string>
     <string name="fighter_advisory">You are going to fight...</string>
     <string name="choose_fighter">Choose your fighter:</string>
+    <string name="botonText">FIGHT!</string>
 </resources>

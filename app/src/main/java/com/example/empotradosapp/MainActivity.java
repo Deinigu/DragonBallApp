@@ -3,15 +3,19 @@ package com.example.empotradosapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.empotradosapp.db.DbHelper;
 import com.example.empotradosapp.personaje.Personaje;
+import com.example.empotradosapp.personaje.PersonajeContract;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     // Atributos para manejar la BD
     private DbHelper dbHelper;
     private SQLiteDatabase db;
+
+    // Atributos para views
+    private Spinner dropMenu;
+    private TextView villainText;
 
     private void initPersonajes() {
 
@@ -63,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
 
         // Gogeta
-        values.put("nombre", "Vegeta");
+        values.put("nombre", "Gogeta");
         values.put("bando", 0);
         values.put("minPoder", 50);
         values.put("maxPoder", 250);
@@ -151,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         Personaje personaje = null;
         Cursor cursorPersonaje;
 
-        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE bando = " + bando + ";", null);
+        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " +  PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO + " = " + bando + ";", null);
         if (cursorPersonaje.moveToFirst()) {
             do {
                 personaje = new Personaje();
@@ -176,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         Personaje personaje = null;
         Cursor cursorPersonaje;
 
-        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE nombre = '" + nombre + "' LIMIT 1;", null);
+        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " +  PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE + " = '" + nombre + "' LIMIT 1;", null);
 
         if (cursorPersonaje.moveToFirst()) {
             personaje = new Personaje();
@@ -199,8 +207,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Obtener views
-        Spinner dropMenu = findViewById(R.id.dropMenu);
-        TextView villainText = findViewById(R.id.villainText);
+        dropMenu = findViewById(R.id.dropMenu);
+        villainText = findViewById(R.id.villainText);
 
         // Inicializar base de datos
         dbHelper = new DbHelper(getApplicationContext());
@@ -224,10 +232,28 @@ public class MainActivity extends AppCompatActivity {
             personajesNames.add(p.getNombre());
         }
 
+        // Esto es para añadir los nombres al desplegable
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, personajesNames);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dropMenu.setAdapter(adapter);
+    }
 
+    // Cuando se pulsa el boton se envian los datos a la otra actividad
+    public void onClickLuchar(View view){
+        try{
+            String nombre = dropMenu.getSelectedItem().toString();
+
+
+            //Log.i("Prueba", heroe.getNombre() + "    " + villano.getNombre());
+            Intent intent = new Intent(this, ResultadoActivity.class);
+            Bundle n = new Bundle();
+            n.putString("heroe",nombre);
+            n.putString("villano",villainText.getText().toString());
+            intent.putExtras(n);
+            startActivity(intent);
+        } catch (Exception e){
+            Log.e("Error", "No se recogieron bien los nombres");
+        }
     }
 
     @Override
