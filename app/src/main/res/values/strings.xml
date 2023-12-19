@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">DragonBallApp</string>
-    <string name="titulo">Dragon Ball Fighter</string>
+    <string name="titulo">Dragon Ball Fight</string>
     <string name="fighter_advisory">You are going to fight...</string>
     <string name="choose_fighter">Choose your fighter:</string>
 </resources>

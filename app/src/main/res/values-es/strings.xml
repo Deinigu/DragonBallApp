@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DragonBallApp</string>
+    <string name="titulo">Pelea de Bola de Dragón</string>
+    <string name="fighter_advisory">Vas a luchar contra...</string>
+    <string name="choose_fighter">Escoge a tu luchador:</string>
+</resources>
