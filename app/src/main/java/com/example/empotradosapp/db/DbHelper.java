@@ -29,6 +29,12 @@ public class DbHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    public void restartDBIfExists(SQLiteDatabase db)
+    {
+        db.execSQL(SQL_DELETE_ENTRIES);
+        db.execSQL(SQL_CREATE_PERSONAJES);
+    }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Este método será invocado al establecer la conexión con la BD
@@ -62,4 +68,6 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_DELETE_ENTRIES);
         onCreate(db);
     }
+
+
 }

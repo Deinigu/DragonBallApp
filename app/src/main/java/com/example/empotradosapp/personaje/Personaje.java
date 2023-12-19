@@ -3,7 +3,7 @@ package com.example.empotradosapp.personaje;
 public class Personaje {
     private int id;
     private String nombre;
-    private int bando;
+    private int bando; // Bueno: 0, Malo: 1.
     private int minPoder;
     private int maxPoder;
     private int tier;
