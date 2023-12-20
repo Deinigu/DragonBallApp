@@ -7,6 +7,9 @@
     <string name="powerText">Final Power:</string>
     <string name="placeholder">Placeholder</string>
     <string name="versus">VS</string>
-    <string name="win">You win!</string>
-    <string name="loser">You lose...</string>
+    <string name="victory">Victory! You are a great fighter</string>
+    <string name="defeat">Defeat... You need more training</string>
+    <string name="draw">Draw. It was a good fight!</string>
+    <string name="min_power">Minimum Power:</string>
+    <string name="max_power">Maximum Power:</string>
 </resources>

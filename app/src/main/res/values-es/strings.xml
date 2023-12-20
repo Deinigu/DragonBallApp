@@ -8,6 +8,9 @@
     <string name="powerText">Poder Final:</string>
     <string name="placeholder">Sustituto</string>
     <string name="versus">CONTRA</string>
-    <string name="win">¡Has ganado!</string>
-    <string name="loser">Has perdido...</string>
+    <string name="victory">¡Victoria! Eres un gran luchador</string>
+    <string name="defeat">Derrota... Necesitas más entrenamiento</string>
+    <string name="draw">Empate. ¡Fue una buena pelea!</string>
+    <string name="min_power">Poder Mínimo:</string>
+    <string name="max_power">Poder Máximo:</string>
 </resources>

@@ -24,6 +24,7 @@ public class ResultadoActivity extends AppCompatActivity {
     TextView villainName;
     TextView heroPower;
     TextView villainPower;
+    TextView resultadoText;
 
     // Atributos para el juego
     private int poderHeroe;
@@ -66,6 +67,7 @@ public class ResultadoActivity extends AppCompatActivity {
         heroPower = findViewById(R.id.heroPower);
         villainName = findViewById(R.id.villainName);
         villainPower = findViewById(R.id.villainPower);
+        resultadoText = findViewById(R.id.resultadoText);
 
         // Obtenemos las variables enviadas desde la anterior actividad
         Intent t = getIntent();
@@ -81,8 +83,20 @@ public class ResultadoActivity extends AppCompatActivity {
         // Calculamos resultado de la pelea
         resultado = calcularResultado(heroe,villano);
 
-        // Comprobar quién ha ganado
+        // Comprobar quién ha ganado y mostrar resultado
+        resultadoText.setText(getResources().getString(R.string.victory));
 
+        if(resultado > 0)
+        {
+            resultadoText.setText(getResources().getString(R.string.victory));
+        }
+        else if(resultado == 0)
+        {
+            resultadoText.setText(getResources().getString(R.string.draw));
+        }
+        else{
+            resultadoText.setText(getResources().getString(R.string.defeat));
+        }
 
         // Poner en pantalla los nombres y el poder de cada uno
         heroName.setText(nombreHeroe);
