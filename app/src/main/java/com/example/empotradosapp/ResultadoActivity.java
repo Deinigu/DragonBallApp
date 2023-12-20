@@ -86,8 +86,6 @@ public class ResultadoActivity extends AppCompatActivity {
         resultado = calcularResultado(heroe, villano);
 
         // Comprobar quién ha ganado y mostrar resultado
-        resultadoText.setText(getResources().getString(R.string.victory));
-
         if (resultado > 0) {
             resultadoText.setText(getResources().getString(R.string.victory));
         } else if (resultado == 0) {
