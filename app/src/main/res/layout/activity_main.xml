@@ -48,7 +48,7 @@
         android:id="@+id/villainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="..."
+        android:text="@string/placeholder"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/dropMenu"
         app:layout_constraintEnd_toEndOf="parent"

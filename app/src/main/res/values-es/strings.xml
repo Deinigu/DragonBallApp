@@ -5,4 +5,9 @@
     <string name="fighter_advisory">Vas a luchar contra...</string>
     <string name="choose_fighter">Escoge a tu luchador:</string>
     <string name="botonText">¡LUCHAD!</string>
+    <string name="powerText">Poder Final:</string>
+    <string name="placeholder">Sustituto</string>
+    <string name="versus">CONTRA</string>
+    <string name="win">¡Has ganado!</string>
+    <string name="loser">Has perdido...</string>
 </resources>

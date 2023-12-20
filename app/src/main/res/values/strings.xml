@@ -4,4 +4,9 @@
     <string name="fighter_advisory">You are going to fight...</string>
     <string name="choose_fighter">Choose your fighter:</string>
     <string name="botonText">FIGHT!</string>
+    <string name="powerText">Final Power:</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="versus">VS</string>
+    <string name="win">You win!</string>
+    <string name="loser">You lose...</string>
 </resources>

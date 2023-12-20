@@ -179,27 +179,6 @@ public class MainActivity extends AppCompatActivity {
         return personajes;
     }
 
-    // Devuelve un personaje de la base de datos a partir de su nombre
-    public Personaje findPersonajeByNombre(String nombre) {
-        Personaje personaje = null;
-        Cursor cursorPersonaje;
-
-        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " +  PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE + " = '" + nombre + "' LIMIT 1;", null);
-
-        if (cursorPersonaje.moveToFirst()) {
-            personaje = new Personaje();
-            personaje.setId(cursorPersonaje.getInt(0));
-            personaje.setNombre(cursorPersonaje.getString(1));
-            personaje.setBando(cursorPersonaje.getInt(2));
-            personaje.setMinPoder(cursorPersonaje.getInt(3));
-            personaje.setMaxPoder(cursorPersonaje.getInt(4));
-            personaje.setTier(cursorPersonaje.getInt(5));
-        }
-
-        cursorPersonaje.close();
-
-        return personaje;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -243,7 +222,6 @@ public class MainActivity extends AppCompatActivity {
         try{
             String nombre = dropMenu.getSelectedItem().toString();
 
-
             //Log.i("Prueba", heroe.getNombre() + "    " + villano.getNombre());
             Intent intent = new Intent(this, ResultadoActivity.class);
             Bundle n = new Bundle();
@@ -251,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
             n.putString("villano",villainText.getText().toString());
             intent.putExtras(n);
             startActivity(intent);
+
         } catch (Exception e){
             Log.e("Error", "No se recogieron bien los nombres");
         }
