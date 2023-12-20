@@ -2,12 +2,14 @@ package com.example.empotradosapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.empotradosapp.db.DbHelper;
 import com.example.empotradosapp.personaje.Personaje;
@@ -104,6 +106,14 @@ public class ResultadoActivity extends AppCompatActivity {
 
         villainName.setText(nombreVillano);
         villainPower.setText(String.valueOf(poderVillano));
+
+        // Toast
+        Context context = getApplicationContext();
+        CharSequence text = getResources().getString(R.string.toast_info) + "  " + Math.abs(resultado);
+        int duration = Toast.LENGTH_LONG;
+        Toast toast = Toast.makeText(context, text,
+                duration);
+        toast.show();
 
 
     }

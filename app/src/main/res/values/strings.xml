@@ -12,4 +12,5 @@
     <string name="draw">Draw. It was a good fight!</string>
     <string name="min_power">Minimum Power:</string>
     <string name="max_power">Maximum Power:</string>
+    <string name="toast_info">Power difference:</string>
 </resources>

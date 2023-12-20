@@ -13,4 +13,5 @@
     <string name="draw">Empate. ¡Fue una buena pelea!</string>
     <string name="min_power">Poder Mínimo:</string>
     <string name="max_power">Poder Máximo:</string>
+    <string name="toast_info">Diferencia de poder:</string>
 </resources>
