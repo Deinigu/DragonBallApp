@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
         Personaje personaje = null;
         Cursor cursorPersonaje;
 
-        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " +  PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO + " = " + bando + ";", null);
+        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " + PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO + " = " + bando + ";", null);
         if (cursorPersonaje.moveToFirst()) {
             do {
                 personaje = new Personaje();
@@ -247,18 +247,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Cuando se pulsa el boton se envian los datos a la otra actividad
-    public void onClickLuchar(View view){
-        try{
+    public void onClickLuchar(View view) {
+        try {
             String nombre = dropMenu.getSelectedItem().toString();
 
             Intent intent = new Intent(this, ResultadoActivity.class);
             Bundle n = new Bundle();
-            n.putString("heroe",nombre);
-            n.putString("villano",villainText.getText().toString());
+            n.putString("heroe", nombre);
+            n.putString("villano", villainText.getText().toString());
             intent.putExtras(n);
             startActivity(intent);
 
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.e("Error", "No se recogieron bien los nombres");
         }
     }

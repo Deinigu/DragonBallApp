@@ -38,7 +38,7 @@ public class ResultadoActivity extends AppCompatActivity {
         Personaje personaje = null;
         Cursor cursorPersonaje;
 
-        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " +  PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE + " = '" + nombre + "' LIMIT 1;", null);
+        cursorPersonaje = db.rawQuery("SELECT * FROM " + DbHelper.TABLE_PERSONAJES + " WHERE " + PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE + " = '" + nombre + "' LIMIT 1;", null);
 
         if (cursorPersonaje.moveToFirst()) {
             personaje = new Personaje();
@@ -83,20 +83,16 @@ public class ResultadoActivity extends AppCompatActivity {
         Personaje villano = findPersonajeByNombre(nombreVillano);
 
         // Calculamos resultado de la pelea
-        resultado = calcularResultado(heroe,villano);
+        resultado = calcularResultado(heroe, villano);
 
         // Comprobar quién ha ganado y mostrar resultado
         resultadoText.setText(getResources().getString(R.string.victory));
 
-        if(resultado > 0)
-        {
+        if (resultado > 0) {
             resultadoText.setText(getResources().getString(R.string.victory));
-        }
-        else if(resultado == 0)
-        {
+        } else if (resultado == 0) {
             resultadoText.setText(getResources().getString(R.string.draw));
-        }
-        else{
+        } else {
             resultadoText.setText(getResources().getString(R.string.defeat));
         }
 
@@ -115,11 +111,10 @@ public class ResultadoActivity extends AppCompatActivity {
                 duration);
         toast.show();
 
-
     }
 
     // Función que calcula el resultado de la pelea
-    private int calcularResultado(Personaje heroe, Personaje villano){
+    private int calcularResultado(Personaje heroe, Personaje villano) {
         Random rand = new Random();
         poderHeroe = rand.nextInt((heroe.getMaxPoder() - heroe.getMinPoder()) + 1) + heroe.getMinPoder();
         poderVillano = rand.nextInt((villano.getMaxPoder() - villano.getMinPoder()) + 1) + villano.getMinPoder();
