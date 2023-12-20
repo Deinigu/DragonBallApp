@@ -4,16 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/namek"
+    android:backgroundTint="#ABFFFFFF"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/minPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/placeholder"
+        android:textSize="21sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.667" />
@@ -22,10 +28,13 @@
         android:id="@+id/maxPower"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="@string/placeholder"
+        android:textSize="21sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.667" />
@@ -35,50 +44,55 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/min_power"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.582" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <TextView
         android:id="@+id/maxPowerTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/max_power"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintHorizontal_bias="0.863"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.603" />
 
     <TextView
         android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="143dp"
+        android:layout_height="43dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
+        android:shadowColor="#C80303"
         android:text="@string/app_name"
+        android:textColor="#985104"
+        android:textColorHighlight="#DF0000"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <Spinner
         android:id="@+id/dropMenu"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
+        android:layout_width="378dp"
+        android:layout_height="52dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="67dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleText"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.358" />
 
     <TextView
         android:id="@+id/advisoryText"
@@ -86,6 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:text="@string/fighter_advisory"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/dropMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -94,15 +110,19 @@
 
     <TextView
         android:id="@+id/villainText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="254dp"
+        android:layout_height="90dp"
+        android:fontFamily="@font/bangers"
+        android:gravity="center"
         android:text="@string/placeholder"
-        android:textSize="24sp"
+        android:textColor="#4E0202"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/dropMenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/advisoryText"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.181" />
 
     <TextView
         android:id="@+id/textView4"
@@ -110,23 +130,30 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
         android:text="@string/choose_fighter"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/dropMenu"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/villainText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.517" />
 
     <Button
         android:id="@+id/botonLucha"
-        android:layout_width="114dp"
-        android:layout_height="85dp"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="183dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#DD5207"
+        android:backgroundTintMode="add"
+
         android:onClick="onClickLuchar"
         android:text="@string/botonText"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.857" />
+        app:layout_constraintVertical_bias="0.913" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

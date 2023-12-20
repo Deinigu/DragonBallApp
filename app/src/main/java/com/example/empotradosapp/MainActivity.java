@@ -41,93 +41,97 @@ public class MainActivity extends AppCompatActivity {
         // Adición de valores a la BD
         ContentValues values = new ContentValues();
 
-        // Krilin
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Krilin");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 3);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 20);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 2);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
-
-        // Goku
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Goku");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 30);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 150);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
-
-        // Vegeta
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Vegeta");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 28);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 80);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 4);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
-
-        // Gohan
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Gohan");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 25);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 145);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
-
-        // Gogeta
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Gogeta");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 50);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 250);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
 
         // Mr. Satan
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Mr. Satan");
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 25);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 2000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 0);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+        // Krilin
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Krilin");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 400);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 50000);
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 1);
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+        // Gohan
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Gohan");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 600);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 100000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 2);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+        // Vegeta
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Vegeta");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 4000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 350000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 3);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+        // Goku
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Goku");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 2000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 500000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 4);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+
+        // Gogeta
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Gogeta");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 0);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 6000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 1000000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
 
         // Raditz
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Raditz");
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 15);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 30);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 100);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 5000);
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 1);
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
 
         // Freezer
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Freezer");
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 30);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 150);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 500);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 100000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 2);
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
 
         // Dabra
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Dabra");
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 20);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 75);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 2000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 250000);
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 3);
-        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
-
-        // Majin Buu
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Majin Buu");
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 25);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 145);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 4);
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
 
         // Cell
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Cell");
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 50);
-        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 150);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 5000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 600000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 4);
+        db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
+        // Majin Buu
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_NOMBRE, "Majin Buu");
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_BANDO, 1);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MINPODER, 10000);
+        values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_MAXPODER, 1500000);
         values.put(PersonajeContract.PersonajeEntry.COLUMN_NAME_TIER, 5);
         db.insert(DbHelper.TABLE_PERSONAJES, null, values);
+
     }
 
     // Devuelve todos los personajes de la base de datos
